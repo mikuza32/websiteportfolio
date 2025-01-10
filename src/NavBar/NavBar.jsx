@@ -1,7 +1,7 @@
 import './NavBar.css';
-import Scrollspy from "react-scrollspy";
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
 const NavBar = () => {
     const [burger_class, setBurgerClass] = useState("burger-bar-unclicked");
@@ -27,13 +27,9 @@ const NavBar = () => {
                 <div className={burger_class}></div>
             </div>
             <div className={`menu ${menu_class}`}>
-                <Scrollspy
-                    items={['AboutMe', 'Projects', 'Experience']} currentClassName="is-current"
-                >
-                    <a href="#AboutMe">About Me</a>
-                    <a href="#Projects">Projects`</a>
-                    <a href="#Experience">Experience</a>
-                </Scrollspy>
+                <HashLink smooth to="#AboutMe" onClick={updateMenu}>About Me</HashLink>
+                <HashLink smooth to="#Projects" onClick={updateMenu}>Projects</HashLink>
+                <HashLink smooth to="#Experience" onClick={updateMenu}>Experience</HashLink>
             </div>
             <Link to='/ContactMe'>
                 <button className='cta-button'>Contact Me</button>
