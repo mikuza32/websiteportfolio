@@ -1,42 +1,43 @@
 import './NavBar.css';
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 
 const NavBar = () => {
-    const [burger_class, setBurgerClass] = useState("burger-bar-unclicked");
-    const [menu_class, setMenuClass] = useState("menu-hidden");
-    const [isMenuClicked, setIsMenuClicked] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-    const updateMenu = () => {
-        if (!isMenuClicked) {
-            setBurgerClass("burger-bar-clicked");
-            setMenuClass("menu-visible");
+    const handleScroll = () => {
+        if (window.scrollY < 50) {
+            setScrolled(true);
         } else {
-            setBurgerClass("burger-bar-unclicked")
-            setMenuClass("menu-hidden")
+            setScrolled(false);
         }
-        setIsMenuClicked(!isMenuClicked);
     };
 
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }, []);
+
+
+
+
     return (
-        <nav className="navbar">
-            <div className="burger-menu" onClick={updateMenu}>
-                <div className={burger_class}></div>
-                <div className={burger_class}></div>
-                <div className={burger_class}></div>
-            </div>
-            <div className={`menu ${menu_class}`}>
-                <HashLink smooth to="#AboutMe" onClick={updateMenu}>About Me</HashLink>
-                <HashLink smooth to="#Projects" onClick={updateMenu}>Projects</HashLink>
-                <HashLink smooth to="#Experience" onClick={updateMenu}>Experience</HashLink>
+        <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+            <div className="hash-links">
+                <HashLink smooth to="/#AboutMe" className= 'about-button'>About Me</HashLink>
+                <HashLink smooth to="/#Projects" className='projects-button'>Projects</HashLink>
+                <HashLink smooth to="/#Experience" className='experience-button'>Experience</HashLink>
             </div>
             <Link to='/ContactMe'>
                 <button className='cta-button'>Contact Me</button>
             </Link>
         </nav>
     );
-
 };
 
 export default NavBar;

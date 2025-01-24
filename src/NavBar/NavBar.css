@@ -1,34 +1,97 @@
-
 .navbar {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 1rem 2rem;
-    background-color: #001750;
+    align-items: center;
+    padding: 10px 15px;
     color: #fff;
     width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+    height: 4.2%;
     top: 0;
-    z-index: 1000;
+    border-radius: 2px;
+    z-index: 100;
     box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: white;
+    font-family: Outfit, sans-serif;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
 .cta-button {
-    padding: 0.25rem .75rem;
-    background-color: #00bcd4;
+    padding: 0.25rem 0.90rem;
+    background: linear-gradient(110deg, purple, deeppink);
+    background-size: 200% 200%;
     color: #fff;
     border: none;
     border-radius: 60px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease-in-out;
+    transition: background 1s ease-in-out, background-position 0.3s ease-in-out;
     white-space: nowrap;
+    font-family: Roboto, sans-serif;
 }
+
 .cta-button:hover {
-    background-color: #0288d1;
+    background: linear-gradient(110deg, darkslategray, lightcoral) 50% 0;
+    background-size: 200% 200%;
 }
+
+.hash-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+.hash-links.scrolled {
+
+}
+
+.about-button,
+.projects-button,
+.experience-button {
+    font-family: Outfit, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.about-button:hover,
+.projects-button:hover,
+.experience-button:hover {
+    color: skyblue;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hash-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .cta-button {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 

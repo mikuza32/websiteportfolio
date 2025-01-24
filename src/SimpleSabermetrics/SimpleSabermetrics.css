@@ -1,0 +1,49 @@
+
+
+.sabr-content {
+    background-color: black;
+    color: beige;
+    align-items: center;
+    z-index: 10;
+
+}
+
+.NavBar {
+    background-color: transparent;
+}
+
+.github-icon {
+
+}
+
+.github-icon img:hover {
+    transform: scale(1.5);
+}
+
+.sabrSlider-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sabrSlider {
+    display: none;
+    width: 48px;
+    height: 48px;
+}
+
+.sabrSlider img {
+    transition: transform 0.3s ease-in-out;
+}
+.sabrSlider img:hover {
+    transform: scale(1.1);
+}
+
+
+.sabrSlider.displaySlides {
+    display: block;
+    margin: 0 auto;
+}
+

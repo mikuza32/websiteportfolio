@@ -12,7 +12,11 @@ const LoadingScreen = () => {
                 setTimeout(() => {
                     loadingScreen.style.display = "none";
                 }, 1500);
-            })
+            });
+        }
+
+        return () => {
+            window.removeEventListener("load", () => {});
         }
     }, []);
 
@@ -29,4 +33,4 @@ const LoadingScreen = () => {
     )
 }
 
-export default LoadingScreen
+export default LoadingScreen;

@@ -1,0 +1,29 @@
+
+
+.siteContent {
+    background-color: black;
+    color: beige;
+    align-items: center;
+    z-index: 10;
+}
+
+.personalSiteSlider-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.personalSiteSlider {
+    display: none;
+
+}
+
+
+.personalSiteSlider.displaySiteSlides {
+    display: block;
+    margin: 0 auto;
+}
+

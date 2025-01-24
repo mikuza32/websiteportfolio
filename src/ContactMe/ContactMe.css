@@ -1,0 +1,82 @@
+
+.contact-me-page {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f4f4f9;
+    padding: 0;
+    margin: 0;
+}
+
+.head-banner {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #001750;
+    color: white;
+}
+
+.head-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.head-banner h3 {
+    font-size: 1.5rem;
+}
+
+.contact-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.mail-contact-box, .linkedin-contact-box {
+    margin: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.mail-contact-box h2, .linkedin-contact-box h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.mail-contact-icon, .linkedin-contact-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail-contact-icon img, .linkedin-contact-icon img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease;
+}
+
+.mail-contact-icon img:hover, .linkedin-contact-icon img:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    .contact-box-container {
+        flex-direction: column;
+    }
+
+    .mail-contact-box, .linkedin-contact-box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .head-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .head-banner h3 {
+        font-size: 1.2rem;
+    }
+}
