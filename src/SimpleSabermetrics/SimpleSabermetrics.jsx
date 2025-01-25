@@ -26,7 +26,7 @@ const SimpleSabermetrics = () => {
     return (
         <div className="sabr-content">
             <NavBar />
-            <div className="head-banner">
+            <div className="simple-banner">
                 <h1>Simple Sabermetrics Web Application</h1>
                 <div className="sabrSlider-container">
                     {sabrSlider.map((slide, index) => (

@@ -11,7 +11,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #001750;
+    background: #121212;
+    accent-color: #61dafb;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +31,7 @@
 .ball {
     width: var(--ball-size);
     height: var(--ball-size);
-    background: var(--ball-image) no-repeat center center / contain;
+    background: var(--ball-image) center center / contain;
     position: relative;
     display: block;
     transform-origin: -50% center;

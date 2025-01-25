@@ -1,49 +1,118 @@
 
 
 .sabr-content {
-    background-color: black;
+    background-color: #121212;
     color: beige;
+    height: 100vh;
+    font-family: Outfit, sans-serif;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.simple-banner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    margin-top: 50px;
     z-index: 10;
-
 }
 
-.NavBar {
-    background-color: transparent;
+.simple-banner h1 {
+    font-size: 54px;
+    font-family: Roboto, sans-serif;
 }
 
-.github-icon {
-
+.github-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
-.github-icon img:hover {
-    transform: scale(1.5);
+.github-link img {
+    margin-left: 10px;
+}
+
+.github-link img:hover {
+    transform: scale(1.1);
 }
 
 .sabrSlider-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    text-align: center;
+    margin-left: 10px;
 }
 
 .sabrSlider {
     display: none;
     width: 48px;
     height: 48px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
-
-.sabrSlider img {
-    transition: transform 0.3s ease-in-out;
-}
-.sabrSlider img:hover {
-    transform: scale(1.1);
-}
-
 
 .sabrSlider.displaySlides {
     display: block;
     margin: 0 auto;
+    opacity: 1;
 }
 
+.sabr-info {
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.sabr-info h2 {
+    font-size: 1.5rem;
+    color: antiquewhite;
+}
+
+.sabr-info p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.sabr-images {
+    margin-top: 30px;
+    padding: 15px;
+}
+
+
+.sabr-info a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sabr-info a:hover {
+    color: #fff;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .simpleContent {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .sabr-info {
+        padding: 10px;
+    }
+
+    .sabr-info h2 {
+        font-size: 1.3rem;
+    }
+}

@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 import "./LoadingScreen.scss";
-import baseballImage from '../assets/baseball.png'
-
+import javaScript from '../assets/icons8-javascript-48.png'
 
 const LoadingScreen = () => {
     useEffect(() => {
@@ -22,7 +21,7 @@ const LoadingScreen = () => {
 
     return (
         <div id="loading-screen">
-            <div className="container" style={{'--ball-image': `url(${baseballImage})`}}>
+            <div className="container" style={{'--ball-image': `url(${javaScript})`}}>
                 <div className="ball"></div>
                 <div className="ball"></div>
                 <div className="ball"></div>

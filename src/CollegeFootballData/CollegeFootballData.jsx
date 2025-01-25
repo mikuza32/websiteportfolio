@@ -1,6 +1,10 @@
 import React from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import {useEffect, useState} from "react";
+import classNames from "classnames";
+import { motion } from "framer-motion";
+import './CollegeFootballData.css'
+
 
 
 
@@ -13,30 +17,42 @@ const CollegeFootballData = () => {
 
     const [slideIndex, setSlideIndex] = useState(0);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const nextSlide = () => {
-        setSlideIndex((prevIndex) => (prevIndex + 1) % cfbSlider.length);
-    };
+
+    const cfbCharts = [
+        process.env.PUBLIC_URL + "week_1_charts.png",
+        process.env.PUBLIC_URL + "week_3_charts.png",
+        process.env.PUBLIC_URL + "week_5_charts.png",
+        process.env.PUBLIC_URL + "week_8_charts.png"
+    ];
+
 
     useEffect( () => {
-        const intervalID = setInterval(nextSlide, 3000);
+        const nextCFBSlide = () => {
+            setSlideIndex((prevIndex) => (prevIndex + 1) % cfbSlider.length);
+        };
+        const intervalID = setInterval(nextCFBSlide, 3000);
         return () => clearInterval(intervalID);
-    }, [nextSlide]);
+    }, []);
 
 
 
     return (
         <div className="cfb-content">
             <NavBar />
-            <div className="head-banner">
+            <div className="cfb-banner">
                 <h1>College Football Data</h1>
                 <div className="cfbSlider">
                     {cfbSlider.map((slide, index) => (
-                        <img
+                        <motion.img
+                            loading="lazy"
                             key={index}
-                            className={`cfbSlider ${index === slideIndex ? "displaySlides" : ""}`}
+                            className={classNames("sabrSlider", {displaySlides: index === slideIndex})}
                             src={slide}
                             alt={`slide ${index}`}
+                            inital={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            exit={{opacity: 0}}
+                            transition={{duration: 0.5}}
                         />
                     ))}
                 </div>
@@ -59,6 +75,22 @@ const CollegeFootballData = () => {
                 </div>
                 <div className="cfb-images">
                     <h2>Images</h2>
+                    {cfbCharts.length > 0 ? (
+                        <div className="cfb-cards">
+                            {cfbCharts.map((chart, index) => (
+                                <div key={index} className="cfb-card">
+                                    <img
+                                        src={process.env.PUBLIC_URL + chart}
+                                        alt={`week ${index + 1 + 2 + 2 + 3}`}
+                                        className="cfb-image"
+                                    />
+                                    <p>Colorado Football Performance Data</p>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p>No Charts available</p>
+                    )}
                 </div>
             </div>
         </div>
