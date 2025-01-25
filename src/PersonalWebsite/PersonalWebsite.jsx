@@ -4,9 +4,16 @@ import {useEffect, useState} from "react";
 import {personalSiteSlider} from "../constants/constants";
 import classNames from "classnames";
 import { motion} from "framer-motion";
-
+import './PersonalWebsite.css'
 
 const PersonalWebsite = () => {
+
+    const siteSlider = [
+        process.env.PUBLIC_URL + "icons8-javascript-48.png",
+        process.env.PUBLIC_URL + "icons8-html-50.png",
+        process.env.PUBLIC_URL + "icons8-css-48.png",
+        process.env.PUBLIC_URL + "icons8-react-40.png"
+    ];
 
 
     const [slideIndex, setSlideIndex] = useState(0);
@@ -14,7 +21,7 @@ const PersonalWebsite = () => {
 
     useEffect( () => {
         const nextPersonalSlide = () => {
-            setSlideIndex((prevIndex) => (prevIndex + 1) % personalSiteSlider.length);
+            setSlideIndex((prevIndex) => (prevIndex + 1) % siteSlider.length);
         };
         const intervalID = setInterval(nextPersonalSlide, 3000);
         return () => clearInterval(intervalID);
@@ -26,14 +33,14 @@ const PersonalWebsite = () => {
     return (
         <div className="site-content">
             <NavBar />
-            <div className="head-banner">
+            <div className="site-banner">
                 <h1>Personal Portfolio Website</h1>
-                <div className="personalSiteSlider-container">
-                    {personalSiteSlider.map((slide, index) => (
+                <div className="siteSlider">
+                    {siteSlider.map((slide, index) => (
                         <motion.img
                             loading="lazy"
                             key={index}
-                            className={classNames("personalSiteSlider", {displaySiteSlides: index === slideIndex})}
+                            className={classNames("sabrSlider", {displaySlides: index === slideIndex})}
                             src={slide}
                             alt={`slide ${index}`}
                             inital={{opacity:0}}

@@ -13,7 +13,7 @@ const CollegeFootballData = () => {
     const cfbSlider = [
         process.env.PUBLIC_URL + "icons8-python-48.png",
         process.env.PUBLIC_URL + "icons8-aws-48.png"
-    ]
+    ];
 
     const [slideIndex, setSlideIndex] = useState(0);
 
