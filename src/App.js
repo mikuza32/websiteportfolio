@@ -14,13 +14,9 @@ import * as colors from '@radix-ui/colors'
 function App() {
   const location = useLocation();
 
-  const theme = {
-    backgroundColor: colors.gray.gray2, // background color
-    color: colors.gray.gray12, // text color
-  };
 
   return (
-    <div style={theme}>
+    <div>
         {location.pathname === '/' && <NavBar/>}
         {location.pathname === '/VCentials' && <NavBar/>}
         {location.pathname === '/PersonalWebsite' && <NavBar/>}

@@ -2,14 +2,13 @@ import {useEffect, useState} from "react";
 
 
 import './LandingPage.css';
-import {useLocation, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 import AOS from "aos";
 import "aos/dist/aos.css"
 import {landingSlider} from "../constants/constants";
-import "../Background/Background"
-import classNames from "classnames";
-import Background from "../Background/Background";
+import {HashLink} from "react-router-hash-link";
+
 
 
 const LandingPage = () => {
@@ -20,6 +19,8 @@ const LandingPage = () => {
     const location = useLocation();
 
     const [repositories, setRepositories] = useState([]);
+
+
 
     useEffect(() => {
         AOS.init({
@@ -84,153 +85,127 @@ const LandingPage = () => {
 
     return (
         <div className="content">
-            {isLoading && <LoadingScreen/>}
+            {isLoading && <LoadingScreen />}
             <div className="landing-page">
-                <Background />
-                <div className="contribution-section">
-                    <h2>GitHub Contribution Graph</h2>
-                    <img
-                        src="https://github-readme-stats.vercel.app/api?username=mikuza32&show_icons=true&hide=prs&count_private=true"
-                        alt="GitHub Stats"
-                        className="github-stats"
-                    />
-                </div>
-
-
-                <div className="content-wrapper">
-                    <div className="social-icons">
-                        <a
-                            href="https://www.linkedin.com/in/zane-mikula-156b22283/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                className="linkedin-icon"
-                                src="https://img.icons8.com/3d-fluency/48/linkedin--v2.png"
-                                alt="LinkedIn"
-                            />
-                        </a>
-                        <a
-                            href="https://github.com/mikuza32"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                className="github-icon"
-                                src="https://img.icons8.com/3d-fluency/48/github.png"
-                                alt="GitHub"
-                            />
-                        </a>
-                        <a
-                            href="mailto:mikuza32@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                className="Gmail-icon"
-                                src="https://img.icons8.com/3d-fluency/48/gmail.png"
-                                alt="Gmail"
-                            />
-                        </a>
-                    </div>
-
-
-                    <div className="intro-banner" data-aos="fade-down">
-                        <h1 className="my-name">Zane Mikula</h1>
-                        <h3 className="soft-dev">Software Developer</h3>
-                    </div>
-
-
-                    <div className="section" id="AboutMe" data-aos="fade-right">
-                        <h2>About Me</h2>
-                        <p>Empty</p>
-                    </div>
-
-
-                    <div className="section" id="Projects" data-aos="fade-left">
-                        <h2>Projects</h2>
-                        <ul className="projectList">
-                            <li>
-                                <strong>Simple Sabermetrics Web Application ----------------- 2024</strong>
-                                <button onClick={loadSabermetrics}>Learn More...</button>
-                            </li>
-                            <li>
-                                <strong>VCentials Web Application ------------------------------ 2024</strong>
-                                <button onClick={loadVCentials}>Learn More...</button>
-                            </li>
-                            <li>
-                                <strong>College Football Data ------------------------------------ 2024</strong>
-                                <button onClick={loadCFB}>Learn More...</button>
-                            </li>
-                            <li>
-                                <strong>Personal Portfolio Website ------------------------------ 2025</strong>
-                                <button onClick={loadPersonalSite}>Learn More...</button>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div className="section" id="Experience" data-aos="zoom-in">
-                        <h2>Experience</h2>
-                        <div className="experience-slider">
-                            {landingSlider.map((slide, index) => (
-                                <img
-                                    loading="lazy"
-                                    key={index}
-                                    className={classNames("landingSlider", {displaySlides: index === slideIndex})}
-                                    src={slide}
-                                    alt={`slide ${index}`}
-                                />
-                            ))}
+                <section className="greeting-section">
+                    <div className="personal-card" data-aos="fade-down">
+                        <div className="personal-img">
+                            <img src="_DSC3338.JPG" alt="Profile" />
+                            <h2>Software Developer</h2>
                         </div>
-                        <p>Empty</p>
                     </div>
-                </div>
-
-
-                <div className="repo-section">
-                    <h2>GitHub Repositories</h2>
-                    {repositories.length > 0 ? (
-                        <div className="repo-cards">
-                            {repositories.slice(0, 5).map((repo, index) => (
-                                <div key={index} className="repo-card">
-                                    <h3>
-                                        <a
-                                            href={repo.html_url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="repo-link"
-                                        >
-                                            {repo.name}
-                                        </a>
-                                    </h3>
-                                    <p className="repo-description">{repo.description || 'No Description'}</p>
-                                    <div className="repo-info">
-                                <span className="repo-language">
-                                    {repo.language && <strong>Language:</strong>} {repo.language || 'N/A'}
-                                </span>
-                                        <span className="repo-stars">
-                                    <strong>Stars:</strong> {repo.stargazers_count}
-                                </span>
-                                        <span className="repo-forks">
-                                    <strong>Forks:</strong> {repo.forks_count}
-                                </span>
-                                    </div>
-                                    <div className="repo-meta">
-                                        <p><strong>Last
-                                            updated:</strong> {new Date(repo.updated_at).toLocaleDateString()}</p>
-                                    </div>
-                                </div>
-                            ))}
+                    <div className="greeting-desc" data-aos="fade-down" data-aos-delay="200">
+                        <h1>Hello! I'm Zane Mikula.</h1>
+                        <p>Welcome to my portfolio! I am a passionate entry level software developer
+                            looking to make a break into the tech industry! I hope to provide some insight
+                            on my experience and how I could potentially be a great fit for your team!</p>
+                    </div>
+                </section>
+                <section className="information-section">
+                    <div className="languages-slider">
+                        <div className="languages-slider-container">
+                            <img src="icons8-javascript-128.png" alt="Profile" />
+                            <img src="icons8-react-100.png" alt="Language-1" />
+                            <img src="icons8-java-128.png" alt="Language-2" />
+                            <img src="icons8-html-96.png" alt="Language-3" />
+                            <img src="icons8-css-128.png" alt="Language-4" />
+                            <img src="icons8-python-128.png" alt="Language-5" />
                         </div>
-                    ) : (
-                        <p>No Repositories to display :(</p>
-                    )}
-                </div>
+                    </div>
+                    <div className="info-card-container">
+                        <div className="info-card" data-aos="fade-up">
+                            <h2>About Me</h2>
+                            <p>Learn more about me and my journey to becoming a Software Developer!</p>
+                            <button>Learn More</button>
+                        </div>
+                        <div className="info-card" data-aos="fade-up" data-aos-delay="200">
+                            <h2>Projects</h2>
+                            <p>Learn more about the projects I have worked on!</p>
+                            <HashLink smooth to="#projects-section">
+                                <button>Learn More</button>
+                            </HashLink>
+                        </div>
+                        <div className="info-card" data-aos="fade-up" data-aos-delay="450">
+                            <h2>Experience</h2>
+                            <p>Learn about the experience I have acquired!</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                </section>
+                <section className="projects-section" id="projects-section">
+                    <h2>My Projects</h2>
+                    <div className="project-cards">
+                        <div className="project-card">
+                            <img src="Screenshot (104).png" alt="SABR" />
+                            <div className="projects-overlay">
+                                <p>Simple Sabermetrics Application</p>
+                                <Link to="/SimpleSabermetrics">
+                                    <button>Learn More</button>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="project-card">
+                            <img src="Screenshot (113).png" alt="VCentials" />
+                            <div className="projects-overlay">
+                                <p>VCentials Application</p>
+                                <Link to="/VCentials">
+                                    <button>Learn More</button>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="project-card">
+                            <img src="week_5_charts.png" alt="SABR" />
+                            <div className="projects-overlay">
+                                <p>College Football Data</p>
+                                <Link to="/CollegeFootballData">
+                                    <button>Learn More</button>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="project-card">
+                            <img src="Screenshot (104).png" alt="SABR" />
+                            <div className="projects-overlay">
+                                <p>Personal Portfolio Website</p>
+                                <Link to="/PersonalWebsite">
+                                    <button>Learn More</button>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="aboutMe" id="aboutMe-section">
+                    <h1>About Me</h1>
+                    <div className="aboutMe-cards">
+                        <div className="aboutMe-card">
+
+                        </div>
+                    </div>
+                </section>
+                <section className="testimonials">
+                    <h2>What My Past Instructors and Classmates Say</h2>
+                    <div className="testimonial-cards">
+                        <div className="testimonial-card" data-aos="fade-up">
+                            <p>Hard worker with a creative mind!</p>
+                            <p>- Professor, Valencia College</p>
+                        </div>
+                        <div className="testimonial-card" data-aos="fade-up">
+                            <p>Hard worker with a creative mind!</p>
+                            <p>- Professor, Valencia College</p>
+                        </div>
+                        <div className="testimonial-card" data-aos="fade-up">
+                            <p>Hard worker with a creative mind!</p>
+                            <p>- Professor, Valencia College</p>
+                        </div>
+                        <div className="testimonial-card" data-aos="fade-up">
+                            <p>Hard worker with a creative mind!</p>
+                            <p>- Professor, Valencia College</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-
     );
+
 
 
 }
