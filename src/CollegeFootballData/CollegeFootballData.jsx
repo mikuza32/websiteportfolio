@@ -60,7 +60,7 @@ const CollegeFootballData = () => {
                     <div className="github-link">
                         <h2>Overview</h2>
                         <a
-                            href="https://github.com/mikuza32/simpleSabreScorecardApp"
+                            href="https://github.com/mikuza32/collegeFootballData"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

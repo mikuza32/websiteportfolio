@@ -3,7 +3,6 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #0D1B1B;
     color: #D9D9D9;
 }
 
@@ -15,7 +14,7 @@ html, body {
     min-height: 100vh;
     padding: 20px;
     margin: 0;
-    background-color: #0D1B1B;
+    background-color: #1A1A1A;
 }
 
 
@@ -31,8 +30,8 @@ html, body {
 }
 
 .personal-img img {
-    max-width: 150px;
-    border-radius: 50%;
+    max-width: 500px;
+    border-radius: 15%;
 }
 
 .greeting-desc h1 {
@@ -44,6 +43,23 @@ html, body {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.download-button {
+    background: linear-gradient(110deg, purple, deeppink);
+    color:ghostwhite;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background 1s ease-in-out, background-position 0.3s ease-in-out;;
+}
+
+.download-button:hover {
+    background: #0070f3;
 }
 
 
@@ -186,12 +202,13 @@ html, body {
 }
 
 .projects-overlay button {
-    background-color: #D9D9D9;
+    background-color: black;
     border: none;
-    padding: 10px 20px;
+    color: beige;
+    padding: 8px 16px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.8s ease;
 }
 
 .projects-overlay button:hover {
@@ -209,6 +226,33 @@ html, body {
     }
 }
 
+.aboutMe h1 {
+    position: absolute;
+    top: 3075px;
+    left: 850px;
+    font-size: 3.0rem;
+    color: beige;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.aboutMe-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.aboutMe-card {
+    background-color: #1A2521;
+    border-radius: 10px;
+    padding: 50px;
+    max-width: 500px;
+    text-align: center;
+    color: beige;
+    transition: transform 0.3s ease-in-out;
+}
 
 
 
@@ -217,44 +261,145 @@ html, body {
     text-align: center;
 }
 
+.testimonials h1 {
+    font-size: 3.0rem;
+    color: beige;
+    margin-bottom: 40px;
+    left: 810px;
+    top: 3850px;
+    z-index: 1;
+    position: absolute;
+
+}
+
 .testimonial-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .testimonial-card {
-    background-color: #1A2521;
-    border-radius: 10px;
+    background-color: #1a1a1a;
     padding: 20px;
-    max-width: 300px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image img {
+    margin-bottom: 30px;
 }
 
 .testimonial-card p {
     font-size: 1rem;
+    color: beige;
+}
+
+.testimonial-text p:last-child {
+    font-size: 0.9rem;
+    color: #ffcc00;
+    margin-top: 10px;
 }
 
 
 .footer {
-    background-color: #1A2521;
-    color: #D9D9D9;
-    padding: 40px 20px;
+    background-color: #1A1A1A;
+    color: beige;
+    padding: 50px 20px;
     text-align: center;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 10px;
 }
 
-.footer button {
-    background-color: #D9D9D9;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-socials a {
+    display: inline-block;
+    transition: transform 0.5s ease, opacity 0.3s ease-in-out;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-5px);
+    opacity: 0.5;
+}
+
+.github-footer, .likedin-footer {
+    width: 42px;
+    height: 42px;
+}
+
+.github-footer:hover, .likedin-footer:hover {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: beige;
+    font-size: 1.0rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: tan;
+    transform: translateY(-2px);
+}
+
+.footer-copy {
     margin-top: 20px;
+    font-size: 0.8rem;
 }
 
-.footer button:hover {
-    background-color: #b5b5b5;
+.footer-copy p {
+    margin: 0;
 }
+
+@media (max-width: 768px) {
+    .footer-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-socials {
+        gap: 15px;
+    }
+
+    .github-footer, .likedin-footer {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 
 
 

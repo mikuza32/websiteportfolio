@@ -30,10 +30,9 @@ const NavBar = () => {
     return (
         <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
             <div className="hash-links">
-                <Link to="/" className='home-button'>Home</Link>
-                <HashLink smooth to="/#aboutMe-section" className= 'about-button'>About Me</HashLink>
+                <HashLink smooth to="/#greeting-section" className='home-button'>Home</HashLink>
                 <HashLink smooth to="/#projects-section" className='projects-button'>Projects</HashLink>
-                <HashLink smooth to="/#experience-section" className='experience-button'>Experience</HashLink>
+                <HashLink smooth to="/#aboutMe-section" className= 'about-button'>About Me</HashLink>
             </div>
             <Link to='/ContactMe'>
                 <button className='cta-button'>Contact Me</button>

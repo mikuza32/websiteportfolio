@@ -1,21 +1,21 @@
 
 .contact-me-page {
-    font-family: 'Outfit', sans-serif;
-    background-color: #f4f4f9;
+    font-family: Roboto, sans-serif;
     padding: 0;
-    margin: 0;
+    background-color: #1A1A1A;
+    height: 110vh;
 }
 
 .head-banner {
     text-align: center;
-    padding: 60px 0;
-    background-color: #001750;
-    color: white;
+    padding: 120px 0;
+    background-color: #1A1A1A;
 }
 
 .head-banner h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    font-family: Roboto, sans-serif;
 }
 
 .head-banner h3 {
@@ -26,22 +26,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
-.mail-contact-box, .linkedin-contact-box {
-    margin: 20px;
+.mail-contact-card, .linkedin-contact-card {
+    margin: 30px;
     padding: 30px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #1A1A1A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
     border-radius: 10px;
     text-align: center;
     width: 300px;
 }
 
-.mail-contact-box h2, .linkedin-contact-box h2 {
+.mail-contact-card:hover, .linkedin-contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.mail-contact-card h2, .linkedin-contact-card h2 {
     font-size: 1.2rem;
-    color: #333;
+    color: beige;
     margin-bottom: 15px;
 }
 
@@ -67,7 +72,7 @@
         flex-direction: column;
     }
 
-    .mail-contact-box, .linkedin-contact-box {
+    .mail-contact-card, .linkedin-contact-card {
         width: 90%;
         margin-bottom: 20px;
     }

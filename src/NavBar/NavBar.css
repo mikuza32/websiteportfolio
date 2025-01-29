@@ -1,20 +1,36 @@
 .navbar {
-    position: fixed;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 15px;
-    color: yellow;
-    width: 100%;
-    height: 4.2%;
-    top: 0;
-    border-radius: 2px;
-    z-index: 100;
+    text-align: center;
+    padding: 15px 30px;
+    width: auto;
+    height: 6%;
+    top: 2%;
+    left: 50%;
+    z-index: 1000;
+    border-radius: 1px;
     box-sizing: border-box;
-    box-shadow: white;
     font-family: Outfit, sans-serif;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
+    background-color: #1A1A1A;
+    transform: translateX(-50%);
+    animation: glow 2s infinite alternate;
+
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 1px royalblue, 0 0 3px royalblue, 0 0 5px royalblue, 0 0 7px royalblue;
+    }
+
+    50% {
+        box-shadow: 0 0 2px #0099CC, 0 0 4px #0099CC, 0 0 30px #0099CC, 0 0 6px #0099CC;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #0066CC, 0 0 20px #0066CC, 0 0 30px #0066CC, 0 0 40px #0066CC;
+    }
 }
 
 
@@ -39,31 +55,29 @@
 
 .hash-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 30%;
-}
-.hash-links.scrolled {
+    margin: 0 20px;
 
 }
 
 .about-button,
 .projects-button,
-.experience-button,
 .home-button {
-    font-family: Outfit, sans-serif;
+    font-family: Roboto, sans-serif;
     color: beige;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    transition: transform 0.5s ease, opacity 0.3s ease-in-out;
+    margin: 0 20px;
 }
 
 .about-button:hover,
 .projects-button:hover,
-.experience-button:hover,
 .home-button:hover   {
     color: #D6B588;
+    transform: translateY(-5px);
 }
 
 @media (max-width: 768px) {

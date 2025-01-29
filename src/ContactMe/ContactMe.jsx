@@ -10,7 +10,7 @@ const ContactMe = () => {
                 <h3>Get In Touch!</h3>
             </div>
             <div className="contact-box-container">
-                <div className="mail-contact-box">
+                <div className="mail-contact-card">
                     <h2>Email me here!</h2>
                     <div className="mail-contact-icon">
                         <a
@@ -26,7 +26,7 @@ const ContactMe = () => {
                         </a>
                     </div>
                 </div>
-                <div className="linkedin-contact-box">
+                <div className="linkedin-contact-card">
                     <h2>Contact me on LinkedIn!</h2>
                     <div className="linkedin-contact-icon">
                         <a
