@@ -1,10 +1,11 @@
-import React from "react-router-dom";
+import React, {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import { motion } from "framer-motion";
 import NavBar from "../NavBar/NavBar";
 import '../SimpleSabermetrics/SimpleSabermetrics.css'
 import {sabrSlider} from "../constants/constants";
 import classNames from "classnames"
+import {HashLink} from "react-router-hash-link";
 
 
 
@@ -78,7 +79,7 @@ const SimpleSabermetrics = () => {
 
     return (
         <div className="sabr-content">
-            <NavBar />
+            <NavBar/>
             <div className="simple-banner">
                 <h1>Simple Sabermetrics Web Application</h1>
                 <div className="sabrSlider-container">
@@ -89,10 +90,10 @@ const SimpleSabermetrics = () => {
                             className={classNames("sabrSlider", {displaySlides: index === slideIndex})}
                             src={slide}
                             alt={`slide ${index}`}
-                            inital={{opacity:0}}
-                            animate={{opacity:1}}
-                            exit={{opacity:0}}
-                            transition={{duration:0.5}}
+                            inital={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            exit={{opacity: 0}}
+                            transition={{duration: 0.5}}
                         />
                     ))}
                 </div>
@@ -112,7 +113,8 @@ const SimpleSabermetrics = () => {
                         </a>
                     </div>
                     <p>The Simple Sabermetrics app allows users to track and calculate baseball performance metrics
-                        like Batting Average, OPS, and ERA. Built with a modern tech stack: React, Spring Boot, MySQL, and more.</p>
+                        like Batting Average, OPS, and ERA. Built with a modern tech stack: React, Spring Boot, MySQL,
+                        and more.</p>
                 </div>
                 <div className="tryMe-cards">
                     <div className="tryMe-card">
@@ -128,7 +130,8 @@ const SimpleSabermetrics = () => {
                             </label>
                             <label>
                                 Total Hit By Pitch:
-                                <input type="number" name="hitByPitch" value={formValue.hitByPitch} onChange={handleInput}/>
+                                <input type="number" name="hitByPitch" value={formValue.hitByPitch}
+                                       onChange={handleInput}/>
                             </label>
                             <label>
                                 Total Hits:
@@ -189,6 +192,31 @@ const SimpleSabermetrics = () => {
                     )}
                 </div>
             </div>
+            <section className="footer">
+                <div className="footer-content">
+                    <div className="footer-socials">
+                        <a href="https://github.com/mikuza32" target="_blank" rel="noopener noreferrer">
+                            <img src="icons8-github-50.png" alt="GitHub Footer" className="github-footer"/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/zane-mikula-156b22283/" target="_blank"
+                           rel="noopener noreferrer">
+                            <img src="icons8-linkedin-48.png" alt="LinkedIn Footer" className="linkedin-footer"/>
+                        </a>
+                    </div>
+                    <div className="footer-nav">
+                        <HashLink smooth to="#greeting-section" className='greeting-button-footer'>Home</HashLink>
+                        <HashLink smooth to="#aboutMe-section" className='about-button-footer'>About Me</HashLink>
+                        <HashLink smooth to="#projects-section"
+                                  className='projects-button-footer'>Projects</HashLink>
+                        <HashLink smooth to="#testimonials-section"
+                                  className='testimonial-button-footer'>Testimonials</HashLink>
+                        <Link to="/ContactMe" className="contact-me-page-footer">Contact Me</Link>
+                    </div>
+                    <div className="footer-copy">
+                        <p>2025 Zane Mikula</p>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 };
