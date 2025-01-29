@@ -319,6 +319,11 @@ const LandingPage = () => {
                             <p>2025 Zane Mikula</p>
                         </div>
                     </div>
+                    <div className="game-directory">
+                        <Link to="/Game">
+                            <button className="game-button">Click Me</button>
+                        </Link>
+                    </div>
                 </section>
             </div>
         </div>
