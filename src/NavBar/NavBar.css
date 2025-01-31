@@ -2,7 +2,7 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     text-align: center;
     padding: 15px 30px;
     width: auto;
@@ -35,7 +35,7 @@
 
 
 .cta-button {
-    padding: 0.25rem 0.90rem;
+    padding: 0.20rem 0.80rem;
     background: linear-gradient(110deg, purple, deeppink);
     background-size: 200% 200%;
     color: #fff;

@@ -192,31 +192,6 @@ const SimpleSabermetrics = () => {
                     )}
                 </div>
             </div>
-            <section className="footer">
-                <div className="footer-content">
-                    <div className="footer-socials">
-                        <a href="https://github.com/mikuza32" target="_blank" rel="noopener noreferrer">
-                            <img src="icons8-github-50.png" alt="GitHub Footer" className="github-footer"/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/zane-mikula-156b22283/" target="_blank"
-                           rel="noopener noreferrer">
-                            <img src="icons8-linkedin-48.png" alt="LinkedIn Footer" className="linkedin-footer"/>
-                        </a>
-                    </div>
-                    <div className="footer-nav">
-                        <HashLink smooth to="#greeting-section" className='greeting-button-footer'>Home</HashLink>
-                        <HashLink smooth to="#aboutMe-section" className='about-button-footer'>About Me</HashLink>
-                        <HashLink smooth to="#projects-section"
-                                  className='projects-button-footer'>Projects</HashLink>
-                        <HashLink smooth to="#testimonials-section"
-                                  className='testimonial-button-footer'>Testimonials</HashLink>
-                        <Link to="/ContactMe" className="contact-me-page-footer">Contact Me</Link>
-                    </div>
-                    <div className="footer-copy">
-                        <p>2025 Zane Mikula</p>
-                    </div>
-                </div>
-            </section>
         </div>
     )
 };

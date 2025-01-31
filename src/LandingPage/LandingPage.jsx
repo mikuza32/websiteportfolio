@@ -321,7 +321,7 @@ const LandingPage = () => {
                     </div>
                     <div className="game-directory">
                         <Link to="/Game">
-                            <button className="game-button">Click Me</button>
+                            <button className="game-button-landing">Click Me</button>
                         </Link>
                     </div>
                 </section>

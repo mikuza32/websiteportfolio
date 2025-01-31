@@ -11,6 +11,7 @@ const Game = () => {
     const [timer, setTimer] = useState(30);
     const [timeout, setTimeout] = useState(false);
     const [gameOver, setGameOver] = useState(false);
+    const [gameStarted, setGameStarted] = useState(false);
 
     const initialTime = 30;
 
@@ -45,7 +46,7 @@ const Game = () => {
 
 
     useEffect(() => {
-        if (timer > 0 && !gameOver && !timeout) {
+        if (timer > 0 &&  gameStarted &&!gameOver && !timeout) {
             const timeInterval = setInterval(() => {
                 setTimer(prevTimer => prevTimer - 1);
             }, 1000);
@@ -54,7 +55,7 @@ const Game = () => {
             setTimeout(true);
             setGameOver(true);
         }
-    }, [timer, gameOver, timeout]);
+    }, [timer, gameOver, timeout, gameStarted]);
 
 
     const handleUserAnswer = (answer) => {
@@ -71,9 +72,14 @@ const Game = () => {
         }
     };
 
+    const startGame = () => {
+        setGameStarted(true);
+        setTimer(initialTime);
+    }
+
     if (gameOver) {
         return (
-            <div>
+            <div className="game-over-card">
                 <h1>Game Over!</h1>
                 <p>Your Final Score: {score}</p>
                 <button onClick={() => window.location.reload()}>Restart</button>
@@ -89,17 +95,29 @@ const Game = () => {
     }
 
     return (
-        <div className="quiz">
-            <h2>Current Score: {score}</h2>
-            <h3>Time Remaining: {timer}s</h3>
-            <div>
-                <h4>{questions[currentQuestionsIndex]?.question}</h4>
-                {questions[currentQuestionsIndex]?.answers.map((answer, index) => (
-                    <button key={index} onClick={() => handleUserAnswer(answer)}>
-                        {answer}
-                    </button>
-                ))}
-            </div>
+        <div className="game-container">
+            {!gameStarted ? (
+                <div className="start-screen">
+                    <h2>Welcome to Zane's Baseball Trivia!</h2>
+                    <button onClick={startGame}>Start</button>
+                    <HashLink smooth to="/#greeting-section">
+                        <button>No Thanks</button>
+                    </HashLink>
+                </div>
+            ) : (
+                <div className="quiz-card">
+                    <h2>Current Score: {score}</h2>
+                    <h3>Time Remaining: {timer}s</h3>
+                    <div className="answers-container">
+                        <h4>{questions[currentQuestionsIndex]?.question}</h4>
+                        {questions[currentQuestionsIndex]?.answers.map((answer, index) => (
+                            <button key={index} onClick={() => handleUserAnswer(answer)} disabled={timeout}>
+                                {answer}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 
