@@ -228,7 +228,7 @@ html, body {
 
 .aboutMe h1 {
     position: absolute;
-    top: 3075px;
+    top: 3035px;
     left: 850px;
     font-size: 3.0rem;
     color: beige;
@@ -252,6 +252,12 @@ html, body {
     text-align: center;
     color: beige;
     transition: transform 0.3s ease-in-out;
+}
+
+.aboutMe-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+
 }
 
 

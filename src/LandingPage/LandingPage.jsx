@@ -190,20 +190,38 @@ const LandingPage = () => {
                     <div className="aboutMe-cards">
                         <div className="aboutMe-card" data-aos="fade-up">
                             <h2>My Education</h2>
-                            <p>Empty</p>
+                            <p>I currently have a Bachelors Degree from Valencia College, where I gained knowledge of Software Development
+                                principles and moder programming practices. Throughout my time at Valencia College I worked on various
+                                projects that developed my problem-solving skills focusing on full-stack web development.
+                            </p>
                         </div>
                         <div className="aboutMe-card" data-aos="fade-up" data-aos-delay="200">
                             <h2>Skills and Technology Stack</h2>
-                            <p>Empty</p>
+                            <p>
+                                I am proficient and have experience in a range of technologies with a focus for front-end development, including:
+                                <ul>
+                                    <li><strong>Front-end: </strong>JavaScript, React, HTML5, CSS3</li>
+                                    <li><strong>Back-end: </strong>Java, Node.js, Spring Boot</li>
+                                    <li><strong>Databases: </strong>MySQL, Firebase</li>
+                                    <li><strong>Tools: </strong>Git, AWS, Vercel</li>
+                                </ul>
+                            </p>
                         </div>
                         <div className="aboutMe-card" data-aos="fade-up" data-aos-delay="400">
                             <h2>Experience</h2>
-                            <p>Empty</p>
+                            <p>As a software developer I have worked on various projects involving multiple frameworks and languages.
+                                From querying APIs to retrieve resourceful data to developing a full-stack web application that
+                                can calculate a users baseball sabermetrics persistently while using modern technologies. I also
+                                developed and deployed this personal site by myself, with the intent to update it in later versions
+                                to provide my newly acquired knowledge on web scraping while using Node.js.
+
+
+                            </p>
                         </div>
                     </div>
                 </section>
                 <section className="testimonials" id="testimonials-section">
-                    <h1>Testimonials</h1>
+                    <h1>Testimonial</h1>
                     <div className="testimonial-cards">
                         <div className="testimonial-card" data-aos="fade-up">
                             <div className="testimonial-image">
