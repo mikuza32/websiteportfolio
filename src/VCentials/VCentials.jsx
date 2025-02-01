@@ -71,8 +71,17 @@ const VCentials = () => {
                             />
                         </a>
                     </div>
-                    <p>The Simple Sabermetrics app allows users to track and calculate baseball performance metrics
-                        like Batting Average, OPS, and ERA. Built with a modern tech stack: React, Spring Boot, MySQL, and more.</p>
+                    <p>As part of requirements graduating at Valencia College, each Computing Technology and Software Development
+                        student has to complete a senior capstone project along with teammates in that course. For my capstone
+                        task I was assigned to work on a web application developed in modern front-end technologies to help keep
+                        track of refrigerator, freezer, and room temperatures of for perishable food items.
+
+                        VCentials is a nonprofit organization created to help Valencia College students in need. Therefore, the task
+                        of ensuring perishable items are stored safely is imperative so that VCentials can keep helping those in need.
+                        In the course of being apart of this project, I was responsible for developing the home page and metrics page.
+                        These pages helped keep track of recent temperature inputs, metrics on temperature inputs, and allowed users to
+                        make new temperature entries on the home page based on the created account privileges.
+                    </p>
                 </div>
                 <div className="vcential-images">
                     <h2>VCentials App Photos</h2>

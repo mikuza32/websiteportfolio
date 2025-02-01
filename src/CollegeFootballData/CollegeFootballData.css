@@ -69,12 +69,14 @@
 
 .sabr-info h2 {
     font-size: 1.5rem;
-    color: antiquewhite;
+    color: beige;
+    font-family: Roboto, sans-serif;
 }
 
 .sabr-info p {
     font-size: 1rem;
-    color: #bbb;
+    color: beige;
+    font-family: Roboto, sans-serif;
 }
 
 .sabr-images {

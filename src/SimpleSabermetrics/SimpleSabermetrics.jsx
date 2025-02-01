@@ -113,8 +113,15 @@ const SimpleSabermetrics = () => {
                         </a>
                     </div>
                     <p>The Simple Sabermetrics app allows users to track and calculate baseball performance metrics
-                        like Batting Average, OPS, and ERA. Built with a modern tech stack: React, Spring Boot, MySQL,
-                        and more.</p>
+                        like Batting Average, OPS, and ERA. This application I developed was built with a modern tech stack
+                        including React, Spring Boot, and MySQL.
+
+                        This application helps a user by providing data to the application to understand their quantitative results.
+                        A user can then take this data they retrieved from the application to understand their own or someone else's
+                        performance on the baseball field. In recent years, the ability to analyze numbers of the game can help improve
+                        ones overall performance or identify what they struggle in. Therefore, using this application can help users
+                        improve their own performance or understand the game by the numbers as a whole.
+                    </p>
                 </div>
                 <div className="tryMe-cards">
                     <div className="tryMe-card">

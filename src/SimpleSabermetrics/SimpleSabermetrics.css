@@ -3,7 +3,7 @@
 .sabr-content {
     background-color: #121212;
     color: beige;
-    height: 300vh;
+    height: 255vh;
     font-family: Outfit, sans-serif;
     display: flex;
     flex-direction: column;
@@ -69,12 +69,13 @@
 
 .sabr-info h2 {
     font-size: 1.5rem;
-    color: antiquewhite;
+    color: beige;
 }
 
 .sabr-info p {
     font-size: 1rem;
-    color: #bbb;
+    color: beige;
+    font-family: Roboto, sans-serif;
 }
 
 

@@ -82,12 +82,12 @@
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     .hash-links {
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         margin-top: 10px;
     }

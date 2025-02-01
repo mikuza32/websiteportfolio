@@ -71,7 +71,16 @@ const CollegeFootballData = () => {
                             />
                         </a>
                     </div>
-                    <p>Empty</p>
+                    <p>In my College Football Data project, I developed Python scripts that query a College Football Data API.
+                        After the data is queried, the scripts then retrieve the data in a JSON format in a seperate JSON file,
+                        and is put in a separate directory in the project. This data is then manipulated using pandas and matplotlib
+                        to visualize this data into various charts and graphs.
+
+                        The purpose of this project is to gather small data and create conclusions off of that data, therefore
+                        the data I had retrieved was focused on the University of Colorado's football team. I measured their first
+                        8 games of the season and used the important offensive and defensive statistics I queried to create conclusions
+                        on their win-loss ratio.
+                    </p>
                 </div>
                 <div className="cfb-images">
                     <h2>Images</h2>

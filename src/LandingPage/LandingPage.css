@@ -180,7 +180,7 @@ html, body {
 
 .projects-section h2 {
     position: absolute;
-    top: 1800px;
+    top: 1750px;
     left: 825px;
     font-size: 3.0rem;
     color: beige;
@@ -228,7 +228,7 @@ html, body {
 
 .aboutMe h1 {
     position: absolute;
-    top: 3035px;
+    top: 2890px;
     left: 850px;
     font-size: 3.0rem;
     color: beige;
@@ -261,7 +261,6 @@ html, body {
 }
 
 
-
 .testimonials {
     margin-top: 50px;
     text-align: center;
@@ -272,7 +271,7 @@ html, body {
     color: beige;
     margin-bottom: 40px;
     left: 810px;
-    top: 3850px;
+    top: 3825px;
     z-index: 1;
     position: absolute;
 
@@ -408,48 +407,8 @@ html, body {
 
 
 
-.game-button-landing {
-    border-radius: 10px;
-    background-color: orangered;
-    animation: colorChange 3s infinite;
-    transition: background-color 1s ease-in-out, transform 0.4s ease;
-    padding: 15px 30px;
-    position: absolute;
-    top: 5575px;
-    left: 895px;
-}
-
-.game-button-landing:hover {
-    transform: translateY(-5%);
-}
 
 
-@keyframes colorChange {
-    0% {
-        background-color: blue;
-    }
-
-    20% {
-        background-color: purple;
-    }
-
-    40% {
-        background-color: violet;
-    }
-
-    60% {
-        background-color: deeppink;
-    }
-
-    80% {
-        background-color: red;
-    }
-
-    100% {
-        background-color: blue;
-    }
-
-}
 
 
 

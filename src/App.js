@@ -8,7 +8,6 @@ import SimpleSabermetrics from "./SimpleSabermetrics/SimpleSabermetrics";
 import ContactMe from "./ContactMe/ContactMe";
 import NavBar from "./NavBar/NavBar";
 import CollegeFootballData from "./CollegeFootballData/CollegeFootballData";
-import Game from "./Game/Game";
 
 
 function App() {
@@ -32,7 +31,6 @@ function App() {
           <Route path='/SimpleSabermetrics' element={<SimpleSabermetrics />} />
           <Route path='/ContactMe' element={<ContactMe />} />
           <Route path='/CollegeFootballData' element={<CollegeFootballData/>} />
-          <Route path="/Game" element={<Game />} />
         </Routes>
     </div>
   );

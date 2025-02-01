@@ -1,7 +1,6 @@
 import React from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import {useEffect, useState} from "react";
-import {personalSiteSlider} from "../constants/constants";
 import classNames from "classnames";
 import { motion} from "framer-motion";
 import './PersonalWebsite.css'
@@ -54,7 +53,7 @@ const PersonalWebsite = () => {
                     <div className="github-link">
                         <h2>Overview</h2>
                         <a
-                            href="https://github.com/mikuza32/websiteportfolio"
+                            href="https://github.com/mikuza32"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -65,11 +64,15 @@ const PersonalWebsite = () => {
                             />
                         </a>
                     </div>
-                    <p>The Simple Sabermetrics app allows users to track and calculate baseball performance metrics
-                        like Batting Average, OPS, and ERA. Built with a modern tech stack: React, Spring Boot, MySQL, and more.</p>
-                </div>
-                <div className="site-images">
-                    <h2>Images</h2>
+                    <p>The Personal Portfolio project I developed (and still is developing), was created to provide a
+                        overall summary of the technology stack I have acquired through various projects and course work
+                        while at Valencia College. I am currently an entry level software developer as I have no prior work
+                        experience and I graduated with my Bachelors Degree at Valencia College on December, 2024.
+
+                        This project has been fully developed using React and was deployed using Vercel. I plan to keep
+                        on optimizing and improving upon this project as time goes on, to provide more insight on my
+                        blossoming technical career.
+                    </p>
                 </div>
             </div>
         </div>

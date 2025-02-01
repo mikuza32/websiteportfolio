@@ -245,72 +245,6 @@ const LandingPage = () => {
                                 <p>- Professor Ashley Evans, Valencia College</p>
                             </div>
                         </div>
-                        <div className="testimonial-card" data-aos="fade-up" data-aos-delay="500">
-                            <div className="testimonial-image">
-                                <img src="VC-Secondary-Web.png" alt="school logo"/>
-                            </div>
-                            <div className="testimonial-text">
-                                <p>❝Zane was a student in my Open Source Web Technologies course during the Fall 2024
-                                    semester. This research-intensive course required students to build their own
-                                    full-stack web application using multiple open-source frameworks. For his project,
-                                    Zane developed a web application that provided an advanced analysis of various
-                                    baseball
-                                    statistics. He successfully combined front-end design, UI/UX principles, and backend
-                                    integration to create a fully functional and polished app.
-
-                                    Throughout the course, Zane consistently met all deadlines and delivered
-                                    high-quality
-                                    work at every checkpoint. Through this experience, he developed several
-                                    industry-standard
-                                    full-stack development skills that would make him a valuable asset to any employer.
-                                    It was a pleasure having him in my class.❞</p>
-                                <p>- Professor Ashley Evans, Valencia College</p>
-                            </div>
-                        </div>
-                        <div className="testimonial-card" data-aos="fade-up" data-aos-delay="1000">
-                            <div className="testimonial-image">
-                                <img src="VC-Secondary-Web.png" alt="school logo"/>
-                            </div>
-                            <div className="testimonial-text">
-                                <p>❝Zane was a student in my Open Source Web Technologies course during the Fall 2024
-                                    semester. This research-intensive course required students to build their own
-                                    full-stack web application using multiple open-source frameworks. For his project,
-                                    Zane developed a web application that provided an advanced analysis of various
-                                    baseball
-                                    statistics. He successfully combined front-end design, UI/UX principles, and backend
-                                    integration to create a fully functional and polished app.
-
-                                    Throughout the course, Zane consistently met all deadlines and delivered
-                                    high-quality
-                                    work at every checkpoint. Through this experience, he developed several
-                                    industry-standard
-                                    full-stack development skills that would make him a valuable asset to any employer.
-                                    It was a pleasure having him in my class.❞</p>
-                                <p>- Professor Ashley Evans, Valencia College</p>
-                            </div>
-                        </div>
-                        <div className="testimonial-card" data-aos="fade-up"data-aos-delay="1500">
-                            <div className="testimonial-image">
-                                <img src="VC-Secondary-Web.png" alt="school logo"/>
-                            </div>
-                            <div className="testimonial-text">
-                                <p>❝Zane was a student in my Open Source Web Technologies course during the Fall 2024
-                                    semester. This research-intensive course required students to build their own
-                                    full-stack web application using multiple open-source frameworks. For his project,
-                                    Zane developed a web application that provided an advanced analysis of various
-                                    baseball
-                                    statistics. He successfully combined front-end design, UI/UX principles, and backend
-                                    integration to create a fully functional and polished app.
-
-                                    Throughout the course, Zane consistently met all deadlines and delivered
-                                    high-quality
-                                    work at every checkpoint. Through this experience, he developed several
-                                    industry-standard
-                                    full-stack development skills that would make him a valuable asset to any employer.
-                                    It was a pleasure having him in my class.❞</p>
-                                <p>- Professor Ashley Evans, Valencia College</p>
-                            </div>
-                        </div>
                     </div>
                 </section>
                 <section className="footer">
@@ -336,11 +270,6 @@ const LandingPage = () => {
                         <div className="footer-copy">
                             <p>2025 Zane Mikula</p>
                         </div>
-                    </div>
-                    <div className="game-directory">
-                        <Link to="/Game">
-                            <button className="game-button-landing">Click Me</button>
-                        </Link>
                     </div>
                 </section>
             </div>

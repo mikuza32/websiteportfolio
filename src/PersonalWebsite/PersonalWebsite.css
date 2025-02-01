@@ -3,12 +3,12 @@
 .site-content {
     background-color: #121212;
     color: beige;
-    height: max-content;
     font-family: Outfit, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    height: 100vh;
 }
 
 .site-banner {
@@ -18,7 +18,7 @@
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
     margin-top: 75px;
     z-index: 10;
@@ -70,11 +70,13 @@
 .site-info h2 {
     font-size: 1.5rem;
     color: antiquewhite;
+    font-family: Roboto, sans-serif;
 }
 
 .site-info p {
     font-size: 1rem;
-    color: #bbb;
+    color: beige;
+    font-family: Roboto, sans-serif;
 }
 
 .site-images {
