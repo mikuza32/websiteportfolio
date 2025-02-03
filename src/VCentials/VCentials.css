@@ -156,3 +156,19 @@
     }
 }
 
+@media (max-width: 1440px) {
+    .vcential-card {
+        max-width: 650px;
+    }
+
+    .vcential-content {
+        height: 150vh;
+    }
+
+    .vcential-banner {
+        max-width: 1375px;
+        border-radius: 20px;
+    }
+
+}
+

@@ -247,7 +247,7 @@ html, body {
 .aboutMe-card {
     background-color: #1A2521;
     border-radius: 10px;
-    padding: 50px;
+    padding: 30px;
     max-width: 500px;
     text-align: center;
     color: beige;
@@ -402,6 +402,187 @@ html, body {
     .github-footer, .likedin-footer {
         width: 30px;
         height: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .project-cards {
+        grid-template-columns: 1fr;
+        margin-bottom: 100px;
+    }
+
+
+    .greeting-desc h1 {
+        font-size: 2rem;
+    }
+
+    .greeting-desc p {
+        font-size: 1rem;
+    }
+
+    .personal-img img {
+        max-width: 400px;
+    }
+
+    .info-card-container {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 120px;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+
+
+    .download-button {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .projects-section h2 {
+        font-size: 2rem;
+        position: absolute;
+        top: 1650px;
+        left: 440px
+    }
+
+    .projects-overlay p {
+        font-size: 1rem;
+    }
+
+    .projects-overlay button {
+        padding: 6px 12px;
+    }
+
+    .aboutMe h1 {
+        font-size: 2rem;
+        position: absolute;
+        top: 4430px;
+        left: 440px;
+    }
+
+    .testimonials h1 {
+        font-size: 2rem;
+        position: absolute;
+        top: 5675px;
+        left: 440px;
+    }
+
+    .aboutMe-cards {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 115px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .greeting-desc h1 {
+        font-size: 1.5rem;
+    }
+
+    .greeting-desc p {
+        font-size: 0.9rem;
+    }
+
+    .download-button {
+        font-size: 0.8rem;
+    }
+
+    .project-card {
+        height: auto;
+    }
+
+    .projects-section h2 {
+        font-size: 2rem;
+    }
+
+    .projects-overlay p {
+        font-size: 1rem;
+    }
+
+    .footer-socials {
+        gap: 15px;
+    }
+
+    .github-footer, .likedin-footer {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .testimonials h1 {
+        font-size: 2rem;
+        position: absolute;
+        top: 2000px;
+        left: 200px;
+    }
+
+    .aboutMe h1 {
+        font-size: 2rem;
+        position: absolute;
+        top: 4430px;
+        left: 440px;
+    }
+
+    .projects-section h2 {
+        font-size: 1rem;
+        position: absolute;
+        top: 1650px;
+        left: 440px
+    }
+
+}
+
+@media (max-width: 1440px) {
+
+    .project-cards {
+        margin-bottom: 100px;
+    }
+
+    .testimonials h1 {
+        font-size: 2rem;
+        position: absolute;
+        top: 3800px;
+        left: 640px;
+    }
+
+    .aboutMe h1 {
+        font-size: 2rem;
+        position: absolute;
+        top: 3050px;
+        left: 640px;
+    }
+
+    .projects-section h2 {
+        font-size: 2rem;
+        position: absolute;
+        top: 1750px;
+        left: 640px
+    }
+
+    .aboutMe-card {
+        max-width: 400px;
+    }
+
+    .info-card {
+        max-width: 400px;
+    }
+
+    .testimonial-card {
+        display: flex;
+        position: absolute;
+        top: 3980px;
+        left: 500px;
+        max-width: 500px;
     }
 }
 

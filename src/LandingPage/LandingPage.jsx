@@ -175,7 +175,7 @@ const LandingPage = () => {
                             </div>
                         </div>
                         <div className="project-card">
-                            <img src="Screenshot (104).png" alt="SABR" data-aos="fade-left" data-aos-delay="600"/>
+                            <img src="Screenshot (163).png" alt="SABR" data-aos="fade-left" data-aos-delay="600"/>
                             <div className="projects-overlay">
                                 <p>Personal Portfolio Website</p>
                                 <Link to="/PersonalWebsite">

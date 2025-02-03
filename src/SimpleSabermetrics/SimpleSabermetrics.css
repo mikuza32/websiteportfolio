@@ -228,3 +228,18 @@
         height: 400px;
     }
 }
+
+@media (max-width: 1440px) {
+    .sabr-card {
+        max-width: 650px;
+    }
+
+    .sabr-content {
+        height: 270vh;
+    }
+
+    .simple-banner {
+        max-width: 1350px;
+    }
+
+}

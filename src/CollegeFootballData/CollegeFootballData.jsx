@@ -83,7 +83,7 @@ const CollegeFootballData = () => {
                     </p>
                 </div>
                 <div className="cfb-images">
-                    <h2>Images</h2>
+                    <h2>College Football Data Project Images</h2>
                     {cfbCharts.length > 0 ? (
                         <div className="cfb-cards">
                             {cfbCharts.map((chart, index) => (
