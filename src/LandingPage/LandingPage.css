@@ -262,31 +262,37 @@ html, body {
 
 
 .testimonials {
-    margin-top: 50px;
-    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh; /* Use vh to ensure proper spacing on different screen sizes */
+    padding: 0 10px; /* Add some padding on the sides to avoid content touching the edges */
 }
 
 .testimonials h1 {
-    font-size: 3.0rem;
-    color: beige;
-    margin-bottom: 40px;
-    left: 810px;
-    top: 3825px;
-    z-index: 1;
     position: absolute;
-
+    top: 5%;  /* Adjust this based on the screen height */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;  /* Make font-size responsive */
+    color: beige;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 0;
 }
 
 .testimonial-cards {
-    display: grid;
+    display: flex;
     justify-content: center;
     gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    margin-top: 15vh;
 }
 
 .testimonial-card {
     background-color: #1a1a1a;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
@@ -295,20 +301,20 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    min-width: 250px;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.9);
-}
-
-.testimonial-image img {
-    margin-bottom: 30px;
-}
-
-.testimonial-card p {
-    font-size: 1rem;
+.testimonial-text {
+    padding: 15px;
+    margin-top: 20px;
     color: beige;
+}
+
+.testimonial-text p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .testimonial-text p:last-child {
@@ -316,6 +322,57 @@ html, body {
     color: #ffcc00;
     margin-top: 10px;
 }
+
+
+
+
+@media (max-width: 767px) {
+    .testimonials h1 {
+        font-size: 8vw;
+    }
+
+    .testimonial-cards {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10vh;
+    }
+
+    .testimonial-card {
+        max-width: 90%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .testimonials h1 {
+        font-size: 6vw;
+    }
+
+    .testimonial-cards {
+        gap: 25px;
+    }
+
+    .testimonial-card {
+        max-width: 45%;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .testimonials h1 {
+        font-size: 3rem;
+    }
+
+    .testimonial-cards {
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        max-width: 30%;
+    }
+}
+
+
 
 
 .footer {
