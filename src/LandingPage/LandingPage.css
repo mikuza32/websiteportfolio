@@ -13,8 +13,8 @@ html, body {
     justify-content: center;
     min-height: 100vh;
     padding: 20px;
-    margin: 0;
     background-color: #1A1A1A;
+    margin: 0;
 }
 
 
@@ -23,6 +23,7 @@ html, body {
     justify-content: center;
     text-align: center;
     color: beige;
+    margin-top: 50px;
 }
 
 .personal-card {
@@ -353,7 +354,7 @@ html, body {
     padding: 50px 20px;
     text-align: center;
     font-family: Roboto, sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 .footer-content {
