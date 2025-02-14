@@ -80,7 +80,7 @@
     transform: translateY(-5px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .about-button, .projects-button, .home-button {
         font-size: 0.5rem;

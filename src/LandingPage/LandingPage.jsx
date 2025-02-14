@@ -145,7 +145,7 @@ const LandingPage = () => {
                     </div>
                 </section>
                 <section className="projects-section" id="projects-section">
-                    <h2>My Projects</h2>
+                    <h1>My Projects</h1>
                     <div className="project-cards">
                         <div className="project-card">
                             <img src="Screenshot (104).png" alt="SABR" data-aos="fade-right" />

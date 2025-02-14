@@ -95,7 +95,7 @@ html, body {
     background-color: #1A2521;
     border-radius: 10px;
     padding: 50px;
-    max-width: 500px;
+    max-width: 425px;
     text-align: center;
     color: beige;
     transition: transform 0.3s ease-in-out;
@@ -130,8 +130,12 @@ html, body {
 
 
 .projects-section {
-    margin-top: 50px;
-    text-align: center;
+    position: relative;
+    width: 100%;
+    padding: 5vh 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -178,13 +182,11 @@ html, body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.projects-section h2 {
-    position: absolute;
-    top: 1750px;
-    left: 825px;
-    font-size: 3.0rem;
+.projects-section h1 {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     color: beige;
-    z-index: 1;
+    z-index: 10;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -215,24 +217,22 @@ html, body {
     background-color: #b5b5b5;
 }
 
-
-@media (max-width: 768px) {
-    .project-cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .project-card {
-        height: auto;
-    }
+.aboutMe {
+    position: relative;
+    width: 100%;
+    padding: 5vh 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+
 .aboutMe h1 {
-    position: absolute;
-    top: 2890px;
-    left: 850px;
-    font-size: 3.0rem;
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 2vh;
     color: beige;
-    z-index: 1;
+    z-index: 10;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -263,23 +263,23 @@ html, body {
 
 .testimonials {
     position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10vh; /* Use vh to ensure proper spacing on different screen sizes */
-    padding: 0 10px; /* Add some padding on the sides to avoid content touching the edges */
+    padding: 5vh 5%;
+    min-height: 100vh;
+    justify-content: center;
+
 }
 
 .testimonials h1 {
-    position: absolute;
-    top: 5%;  /* Adjust this based on the screen height */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 5vw;  /* Make font-size responsive */
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     color: beige;
-    z-index: 1;
+    z-index: 10;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    margin: 0;
+    margin-bottom: 2vh;
 }
 
 .testimonial-cards {
@@ -287,7 +287,9 @@ html, body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 15vh;
+    margin-top: 3vh;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .testimonial-card {
@@ -302,7 +304,7 @@ html, body {
     align-items: center;
     justify-content: center;
     max-width: 400px;
-    width: 100%;
+    width: 90%;
     min-width: 250px;
 }
 
@@ -322,58 +324,6 @@ html, body {
     color: #ffcc00;
     margin-top: 10px;
 }
-
-
-
-
-@media (max-width: 767px) {
-    .testimonials h1 {
-        font-size: 8vw;
-    }
-
-    .testimonial-cards {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 10vh;
-    }
-
-    .testimonial-card {
-        max-width: 90%;
-    }
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .testimonials h1 {
-        font-size: 6vw;
-    }
-
-    .testimonial-cards {
-        gap: 25px;
-    }
-
-    .testimonial-card {
-        max-width: 45%;
-    }
-}
-
-
-@media (min-width: 1025px) {
-    .testimonials h1 {
-        font-size: 3rem;
-    }
-
-    .testimonial-cards {
-        gap: 30px;
-    }
-
-    .testimonial-card {
-        max-width: 30%;
-    }
-}
-
-
-
 
 .footer {
     background-color: #1A1A1A;
@@ -446,202 +396,7 @@ html, body {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .footer-nav {
-        flex-direction: column;
-        gap: 20px;
-    }
 
-    .footer-socials {
-        gap: 15px;
-    }
-
-    .github-footer, .likedin-footer {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .project-cards {
-        grid-template-columns: 1fr;
-        margin-bottom: 100px;
-    }
-
-
-    .greeting-desc h1 {
-        font-size: 2rem;
-    }
-
-    .greeting-desc p {
-        font-size: 1rem;
-    }
-
-    .personal-img img {
-        max-width: 400px;
-    }
-
-    .info-card-container {
-        flex-direction: column;
-        gap: 30px;
-        margin-bottom: 120px;
-    }
-
-    .info-card {
-        padding: 20px;
-    }
-
-
-    .download-button {
-        font-size: 0.9rem;
-        padding: 5px 10px;
-    }
-
-    .projects-section h2 {
-        font-size: 2rem;
-        position: absolute;
-        top: 1650px;
-        left: 440px
-    }
-
-    .projects-overlay p {
-        font-size: 1rem;
-    }
-
-    .projects-overlay button {
-        padding: 6px 12px;
-    }
-
-    .aboutMe h1 {
-        font-size: 2rem;
-        position: absolute;
-        top: 4430px;
-        left: 440px;
-    }
-
-    .testimonials h1 {
-        font-size: 2rem;
-        position: absolute;
-        top: 5675px;
-        left: 440px;
-    }
-
-    .aboutMe-cards {
-        flex-direction: column;
-        gap: 30px;
-        margin-bottom: 115px;
-    }
-
-    .footer-nav {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-
-@media (max-width: 600px) {
-    .greeting-desc h1 {
-        font-size: 1.5rem;
-    }
-
-    .greeting-desc p {
-        font-size: 0.9rem;
-    }
-
-    .download-button {
-        font-size: 0.8rem;
-    }
-
-    .project-card {
-        height: auto;
-    }
-
-    .projects-section h2 {
-        font-size: 2rem;
-    }
-
-    .projects-overlay p {
-        font-size: 1rem;
-    }
-
-    .footer-socials {
-        gap: 15px;
-    }
-
-    .github-footer, .likedin-footer {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-
-@media (max-width: 375px) {
-    .testimonials h1 {
-        font-size: 2rem;
-        position: absolute;
-        top: 2000px;
-        left: 200px;
-    }
-
-    .aboutMe h1 {
-        font-size: 2rem;
-        position: absolute;
-        top: 4430px;
-        left: 440px;
-    }
-
-    .projects-section h2 {
-        font-size: 1rem;
-        position: absolute;
-        top: 1650px;
-        left: 440px
-    }
-
-}
-
-@media (max-width: 1440px) {
-
-    .project-cards {
-        margin-bottom: 100px;
-    }
-
-    .testimonials h1 {
-        font-size: 2rem;
-        position: absolute;
-        top: 3800px;
-        left: 640px;
-    }
-
-    .aboutMe h1 {
-        font-size: 2rem;
-        position: absolute;
-        top: 3050px;
-        left: 640px;
-    }
-
-    .projects-section h2 {
-        font-size: 2rem;
-        position: absolute;
-        top: 1750px;
-        left: 640px
-    }
-
-    .aboutMe-card {
-        max-width: 400px;
-    }
-
-    .info-card {
-        max-width: 400px;
-    }
-
-    .testimonial-card {
-        display: flex;
-        position: absolute;
-        top: 3980px;
-        left: 500px;
-        max-width: 500px;
-    }
-}
 
 
 
