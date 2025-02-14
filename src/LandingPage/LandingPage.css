@@ -23,7 +23,12 @@ html, body {
     justify-content: center;
     text-align: center;
     color: beige;
-    margin-top: 50px;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.navbar.scrolled + .greeting-section {
+    padding-top: 60px;
 }
 
 .personal-card {
