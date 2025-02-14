@@ -1,15 +1,17 @@
 .navbar {
     position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    padding: 15px 30px;
+    padding: 15px 5%;
     width: auto;
     height: 6%;
     top: 2%;
     left: 50%;
     z-index: 1000;
+    max-width: 800px;
+    min-width: 100px;
     border-radius: 1px;
     box-sizing: border-box;
     font-family: Outfit, sans-serif;
@@ -35,17 +37,17 @@
 
 
 .cta-button {
-    padding: 0.20rem 0.80rem;
+    padding: 8px 13px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     background: linear-gradient(110deg, purple, deeppink);
-    background-size: 200% 200%;
     color: #fff;
     border: none;
-    border-radius: 60px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 1rem;
     transition: background 1s ease-in-out, background-position 0.3s ease-in-out;
     white-space: nowrap;
     font-family: Roboto, sans-serif;
+    margin-left: 20%;
 }
 
 .cta-button:hover {
@@ -57,8 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20px;
-
+    gap: 20px;
 }
 
 .about-button,
@@ -67,10 +68,11 @@
     font-family: Roboto, sans-serif;
     color: beige;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: transform 0.5s ease, opacity 0.3s ease-in-out;
-    margin: 0 20px;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    transition: transform 0.5s ease, transform 0.3s ease-in-out;
+    padding: 8px 12px;
+    white-space: nowrap;
 }
 
 .about-button:hover,
@@ -80,53 +82,7 @@
     transform: translateY(-5px);
 }
 
-@media (max-width: 1024px) {
 
-    .about-button, .projects-button, .home-button {
-        font-size: 0.5rem;
-    }
-
-    .navbar {
-        flex-direction: row;
-        align-items: center;
-    }
-
-
-    .cta-button {
-        padding: 0.10rem 0.60rem;
-        font-size: .8rem;
-    }
-}
-
-@media (max-width: 1440px) {
-    .about-button, .projects-button, .home-button {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        padding: 0.10rem 0.60rem;
-        font-size: .8rem;
-        margin-right: 30px;
-    }
-}
-
-@media (max-width: 410px) {
-    .navbar {
-        padding: 1px 2px;
-    }
-
-    .about-button, .projects-button, .home-button {
-        font-size: .8rem;
-
-    }
-
-    .cta-button {
-        padding: 0.05rem 0.50rem;
-        font-size: .7rem;
-        margin-right: 30px;
-    }
-
-}
 
 
 

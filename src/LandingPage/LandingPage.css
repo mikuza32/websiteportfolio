@@ -30,8 +30,11 @@ html, body {
 }
 
 .personal-img img {
-    max-width: 500px;
     border-radius: 15%;
+    flex: 1;
+    min-width: 200px;
+    max-width: 500px;
+    width: 100%;
 }
 
 .greeting-desc h1 {
@@ -77,28 +80,37 @@ html, body {
 }
 
 .languages-slider-container img {
+    flex: 1;
+    min-width: 25px;
     max-width: 100px;
-    margin: 0 10px;
-    border-radius: 5px;
+    width: 100%;
     transition: opacity 0.3s ease-in-out;
 }
 
 
 .info-card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .info-card {
-    background-color: #1A2521;
+    background-color: #1A1A1A;
     border-radius: 10px;
-    padding: 50px;
-    max-width: 425px;
+    padding: 10px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 500px;
+    width: 100%;
     text-align: center;
     color: beige;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 .info-card:hover {
@@ -239,23 +251,31 @@ html, body {
 
 .aboutMe-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .aboutMe-card {
-    background-color: #1A2521;
+    background-color: #1A1A1A;
     border-radius: 10px;
-    padding: 30px;
+    padding: 10px;
+    flex: 1;
+    min-width: 200px;
     max-width: 500px;
+    width: 100%;
     text-align: center;
     color: beige;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 .aboutMe-card h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 
 }
