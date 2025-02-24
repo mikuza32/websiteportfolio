@@ -53,7 +53,7 @@ const PersonalWebsite = () => {
                     <div className="github-link">
                         <h2>Overview</h2>
                         <a
-                            href="https://github.com/mikuza32"
+                            href="https://github.com/mikuza32/websiteportfolio"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
