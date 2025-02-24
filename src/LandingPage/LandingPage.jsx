@@ -137,7 +137,7 @@ const LandingPage = () => {
                         </div>
                         <div className="info-card" data-aos="fade-up" data-aos-delay="450">
                             <h2>Testimonials</h2>
-                            <p>Here from past instructors endorsing my skills.</p>
+                            <p>Hear from past instructors endorsing my skills.</p>
                             <HashLink smooth to="/#testimonials-section">
                                 <button>Learn More</button>
                             </HashLink>
