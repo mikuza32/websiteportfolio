@@ -148,7 +148,7 @@ const LandingPage = () => {
                     <h1>My Projects</h1>
                     <div className="project-cards">
                         <div className="project-card">
-                            <img src="Screenshot (104).png" alt="SABR" data-aos="fade-right" />
+                            <img src="Screenshot (104).png" alt="SABR" data-aos="fade-right"/>
                             <div className="projects-overlay">
                                 <p>Simple Sabermetrics Application</p>
                                 <Link to="/SimpleSabermetrics">
@@ -183,6 +183,15 @@ const LandingPage = () => {
                                 </Link>
                             </div>
                         </div>
+                        <div className="project-card">
+                            <img src="Screenshot (166).png" alt="SABR" data-aos="fade-up" data-aos-delay="800"/>
+                            <div className="projects-overlay">
+                                <p>College Baseball Dashboard</p>
+                                <Link to="/CollegeBaseballDashboard">
+                                    <button>Learn More</button>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section className="aboutMe" id="aboutMe-section">
@@ -190,7 +199,8 @@ const LandingPage = () => {
                     <div className="aboutMe-cards">
                         <div className="aboutMe-card" data-aos="fade-up">
                             <h2>My Education</h2>
-                            <p>I currently have a Bachelors Degree from Valencia College, where I gained knowledge of Software Development
+                            <p>I currently have a Bachelors Degree from Valencia College, where I gained knowledge of
+                                Software Development
                                 principles and moder programming practices. Throughout my time at Valencia College I worked on various
                                 projects that developed my problem-solving skills focusing on full-stack web development.
                             </p>
