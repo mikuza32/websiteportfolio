@@ -61,7 +61,7 @@ const CollegeBaseballDashboard = () => {
                     <div className="github-link">
                         <h2>Overview</h2>
                         <a
-                            href="https://github.com/mikuza32/baseballDashboard"
+                            href="https://github.com/mikuza32/CollegeBaseballDashboard"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
