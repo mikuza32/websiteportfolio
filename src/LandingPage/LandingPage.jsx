@@ -97,7 +97,7 @@ const LandingPage = () => {
                         <div className="personal-img">
                             <img src="_DSC3338.JPG" alt="Profile"/>
                             <h2>Software Developer</h2>
-                            <a href="/Zane_Mikula_Software_Developer_Resume.pdf" download>
+                            <a href="/Zane_Mikula_SWE.pdf" download>
                                 <button className="download-button">Resume</button>
                             </a>
                         </div>
