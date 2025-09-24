@@ -39,8 +39,8 @@
 .cta-button {
     padding: 8px 13px;
     font-size: clamp(0.8rem, 2vw, 1rem);
-    background: linear-gradient(110deg, purple, deeppink);
-    color: #fff;
+    background: linear-gradient(150deg, #003087, white);;
+    color: #0C2340;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -48,11 +48,12 @@
     white-space: nowrap;
     font-family: Roboto, sans-serif;
     margin-left: 20%;
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background: linear-gradient(110deg, darkslategray, lightcoral) 50% 0;
-    background-size: 200% 200%;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
 }
 
 .hash-links {

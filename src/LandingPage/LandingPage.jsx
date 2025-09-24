@@ -93,20 +93,25 @@ const LandingPage = () => {
             {isLoading && <LoadingScreen />}
             <div className="landing-page">
                 <section className="greeting-section" id="greeting-section">
-                    <div className="personal-card" data-aos="fade-down">
-                        <div className="personal-img">
-                            <img src="_DSC3338.JPG" alt="Profile"/>
-                            <h2>Software Developer</h2>
+                    <div className="greeting-desc" data-aos="fade-down" data-aos-delay="200">
+                        <h1>Hello! I'm Zane Mikula.</h1>
+                        <p>Welcome to my portfolio! I am a passionate junior level software developer
+                            looking to make a positive impact on those with my technical repetoire. I hope to provide some insight
+                            on my experience and how I could potentially be a great fit for your team!</p>
+                        <div className="button-container">
                             <a href="/Zane_Mikula_Junior_Web_Developer.pdf" download>
                                 <button className="download-button">Resume</button>
                             </a>
+                            <HashLink smooth to="/#projects-section">
+                                <button className="view-work-button">View My Work</button>
+                            </HashLink>
                         </div>
                     </div>
-                    <div className="greeting-desc" data-aos="fade-down" data-aos-delay="200">
-                        <h1>Hello! I'm Zane Mikula.</h1>
-                        <p>Welcome to my portfolio! I am a passionate entry level software developer
-                            looking to make a break into the tech industry! I hope to provide some insight
-                            on my experience and how I could potentially be a great fit for your team!</p>
+                    <div className="personal-card" data-aos="fade-down">
+                        <div className="personal-img">
+                            <img src="unnamed.jpg" alt="Profile"/>
+                            <h2>Junior Developer</h2>
+                        </div>
                     </div>
                 </section>
                 <section className="information-section">
@@ -122,8 +127,15 @@ const LandingPage = () => {
                     </div>
                     <div className="info-card-container">
                         <div className="info-card" data-aos="fade-up">
+                            <h2>Work Experience</h2>
+                            <p>My professional experience as Junior Developer.</p>
+                            <HashLink smooth to="/#myExperience-section">
+                                <button>Learn More</button>
+                            </HashLink>
+                        </div>
+                        <div className="info-card" data-aos="fade-up" data-aos-delay="100">
                             <h2>About Me</h2>
-                            <p>Learn more about me and my journey to becoming a Software Developer!</p>
+                            <p>Learn more about me and my journey of being a Junior Developer.</p>
                             <HashLink smooth to="/#aboutMe-section">
                                 <button>Learn More</button>
                             </HashLink>
@@ -135,7 +147,7 @@ const LandingPage = () => {
                                 <button>Learn More</button>
                             </HashLink>
                         </div>
-                        <div className="info-card" data-aos="fade-up" data-aos-delay="450">
+                        <div className="info-card" data-aos="fade-up" data-aos-delay="300">
                             <h2>Testimonials</h2>
                             <p>Hear from past instructors endorsing my skills.</p>
                             <HashLink smooth to="/#testimonials-section">
@@ -194,6 +206,23 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </section>
+                <section className="myExperience" id="myExperience-section">
+                    <h1>My Experience</h1>
+                    <div className="myExperience-cards">
+                        <div className="myExperience-card" data-aos="fade-up">
+                            <h2>Zgraph Inc.</h2>
+                            <h3>May 2025 - Current | Support Specialist and Junior Web Developer</h3>
+                            <p> I currently help resolve any technical issues for our clients web applications while also developing new full-stack web application projects.
+                                I help bring designs passed down to completion with the intent to provide the best user dynamic experience possible. <br/> <br/>
+                                Tech Stack: <br/>
+                                <ul>
+                                    <li><strong>Front-end: Elementor on Wordpress, JavaScript, HTML/CSS</strong></li>
+                                    <li><strong>Back-end: PHP and Python</strong></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </section>
                 <section className="aboutMe" id="aboutMe-section">
                     <h1>About Me</h1>
                     <div className="aboutMe-cards">
@@ -201,7 +230,7 @@ const LandingPage = () => {
                             <h2>My Education</h2>
                             <p>I currently have a Bachelors Degree from Valencia College, where I gained knowledge of
                                 Software Development
-                                principles and moder programming practices. Throughout my time at Valencia College I worked on various
+                                principles and modern programming practices. Throughout my time at Valencia College I worked on various
                                 projects that developed my problem-solving skills focusing on full-stack web development.
                             </p>
                         </div>
@@ -210,9 +239,9 @@ const LandingPage = () => {
                             <p>
                                 I am proficient and have experience in a range of technologies with a focus for front-end development, including:
                                 <ul>
-                                    <li><strong>Front-end: </strong>JavaScript, React, HTML5, CSS3</li>
-                                    <li><strong>Back-end: </strong>Java, Node.js, Spring Boot</li>
-                                    <li><strong>Databases: </strong>MySQL, Firebase</li>
+                                    <li><strong>Front-end: </strong>JavaScript, React, HTML5, CSS3, Next.js, Adobe Coldfusion, Wordpress </li>
+                                    <li><strong>Back-end: </strong>Python, Java, Node.js, Spring Boot</li>
+                                    <li><strong>Databases: </strong>MongoDB, MySQL, Firebase</li>
                                     <li><strong>Tools: </strong>Git, AWS, Vercel</li>
                                 </ul>
                             </p>
@@ -222,8 +251,8 @@ const LandingPage = () => {
                             <p>As a software developer I have worked on various projects involving multiple frameworks and languages.
                                 From querying APIs to retrieve resourceful data to developing a full-stack web application that
                                 can calculate a users baseball sabermetrics persistently while using modern technologies. I also
-                                developed and deployed this personal site by myself, with the intent to update it in later versions
-                                to provide my newly acquired knowledge on web scraping while using Node.js.
+                                developed and deployed this personal site by myself. I am also currently taking a machine learning certification course to help broaden my
+                                tech stack.
 
 
                             </p>
