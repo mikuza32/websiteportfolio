@@ -11,7 +11,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 20px;
     background-color: #1A1A1A;
     margin: 0;
@@ -19,58 +19,133 @@ html, body {
 
 
 .greeting-section {
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
-    color: beige;
-    padding-top: 80px;
-    min-height: 100vh;
+    margin: 0 auto;
+    padding: 80px 40px;
+    min-height: 50vh;
+    gap: 40px;
 }
+
 
 .navbar.scrolled + .greeting-section {
     padding-top: 60px;
 }
 
-.personal-card {
-    margin-bottom: 30px;
-}
-
-.personal-img img {
-    border-radius: 15%;
+.greeting-desc {
     flex: 1;
-    min-width: 200px;
-    max-width: 500px;
-    width: 100%;
+    text-align: center;
+    color: beige;
+    max-width: 600px;
+    padding: 40px;
 }
 
 .greeting-desc h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 20px 0;
+    background-image: linear-gradient(150deg, #003087, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    max-width: 600px;
 }
 
 .greeting-desc p {
     font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.personal-card {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.personal-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1a1a1a;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+.personal-img img {
+    border-radius: 10px;
+    width: 250px;
+    height: 225px;
+    object-fit: cover;
+}
+
+.personal-img h2 {
+    color: white;
+    margin: 10px 0 20px 0;
+    font-size: 1.5rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    
+}
+
+.view-work-button {
+    background: linear-gradient(150deg, #003087, white);
+    color: #0C2340;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.view-work-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
 }
 
 .download-button {
-    background: linear-gradient(110deg, purple, deeppink);
-    color:ghostwhite;
-    border: none;
-    padding: 6px 12px;
-    font-size: 1.0rem;
+    background: linear-gradient(150deg, #003087, white);
+    color: #0C2340;
+    padding: 12px 24px;
+    font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 20px;
-    transition: background 1s ease-in-out, background-position 0.3s ease-in-out;;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .download-button:hover {
-    background: #0070f3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
 }
 
+@media (max-width: 768px) {
+    .greeting-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .greeting-desc {
+        text-align: center;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 .information-section {
     flex-direction: column;
@@ -136,16 +211,80 @@ html, body {
 }
 
 .info-card button {
-    background-color: #4CAF50;
+    background: linear-gradient(150deg, #003087, white);
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    color: #0C2340;
 }
 
 .info-card button:hover {
-    background-color: #388E3C;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
+
+.myExperience {
+    position: relative;
+    width: 100%;
+    padding: 5vh 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.myExperience h1 {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 2vh;
+    color: beige;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.myExperience-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.myExperience-card {
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: beige;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transform: translateY(-10px);
+}
+
+.myExperience-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+
+}
+
+.myExperience-card h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+
+}
+
+.myExperience-card li {
+    padding-left: 5px
 }
 
 
@@ -360,6 +499,7 @@ html, body {
     text-align: center;
     font-family: Roboto, sans-serif;
     margin-bottom: 0;
+    min-height: 15px;
 }
 
 .footer-content {
