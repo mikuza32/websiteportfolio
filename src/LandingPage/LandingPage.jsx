@@ -95,9 +95,7 @@ const LandingPage = () => {
                 <section className="greeting-section" id="greeting-section">
                     <div className="greeting-desc" data-aos="fade-down" data-aos-delay="200">
                         <h1>Hello! I'm Zane Mikula.</h1>
-                        <p>Welcome to my portfolio! I am a passionate junior level software developer
-                            looking to make a positive impact on those with my technical repetoire. I hope to provide some insight
-                            on my experience and how I could potentially be a great fit for your team!</p>
+                        <p>Welcome to my portfolio! I'm a passionate junior developer ready to make a positive impact with my technical skills</p>
                         <div className="button-container">
                             <a href="/Zane_Mikula_Junior_Web_Developer.pdf" download>
                                 <button className="download-button">Resume</button>
@@ -135,7 +133,7 @@ const LandingPage = () => {
                         </div>
                         <div className="info-card" data-aos="fade-up" data-aos-delay="100">
                             <h2>About Me</h2>
-                            <p>Learn more about me and my journey of being a Junior Developer.</p>
+                            <p>Learn about my journey as a Junior Developer.</p>
                             <HashLink smooth to="/#aboutMe-section">
                                 <button>Learn More</button>
                             </HashLink>
