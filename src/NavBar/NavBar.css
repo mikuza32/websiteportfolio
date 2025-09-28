@@ -12,7 +12,7 @@
     z-index: 1000;
     max-width: 800px;
     min-width: 100px;
-    border-radius: 1px;
+    border-radius: 15px;
     box-sizing: border-box;
     font-family: Outfit, sans-serif;
     background-color: #1A1A1A;
@@ -39,15 +39,15 @@
 .cta-button {
     padding: 8px 13px;
     font-size: clamp(0.8rem, 2vw, 1rem);
-    background: linear-gradient(150deg, #003087, white);;
-    color: #0C2340;
+    background: linear-gradient(135deg, #ff6b6b, #ffa726);
+    color: beige;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 1s ease-in-out, background-position 0.3s ease-in-out;
     white-space: nowrap;
     font-family: Roboto, sans-serif;
-    margin-left: 20%;
+    margin-left: 15%;
     transition: all 0.3s ease;
 }
 
