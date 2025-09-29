@@ -1,0 +1,85 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa726;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with subtle border -->
+  <circle cx="100" cy="100" r="90" fill="url(#mainGradient)" opacity="0.1" stroke="url(#mainGradient)" stroke-width="2"/>
+  
+  <!-- Hexagon shape (tech/development symbol) -->
+  <polygon points="100,25 150,50 150,125 100,150 50,125 50,50" 
+           fill="none" 
+           stroke="url(#mainGradient)" 
+           stroke-width="3" 
+           opacity="0.3"/>
+  
+  <!-- Code brackets around the letters -->
+  <path d="M 35,70 L 25,85 L 35,100" 
+        stroke="url(#mainGradient)" 
+        stroke-width="3" 
+        fill="none" 
+        stroke-linecap="round"/>
+  <path d="M 165,70 L 175,85 L 165,100" 
+        stroke="url(#mainGradient)" 
+        stroke-width="3" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- Binary dots pattern (subtle) -->
+  <circle cx="60" cy="40" r="2" fill="url(#mainGradient)" opacity="0.4"/>
+  <circle cx="80" cy="35" r="1.5" fill="url(#mainGradient)" opacity="0.3"/>
+  <circle cx="120" cy="35" r="1.5" fill="url(#mainGradient)" opacity="0.3"/>
+  <circle cx="140" cy="40" r="2" fill="url(#mainGradient)" opacity="0.4"/>
+  
+  <circle cx="60" cy="160" r="2" fill="url(#mainGradient)" opacity="0.4"/>
+  <circle cx="80" cy="165" r="1.5" fill="url(#mainGradient)" opacity="0.3"/>
+  <circle cx="120" cy="165" r="1.5" fill="url(#mainGradient)" opacity="0.3"/>
+  <circle cx="140" cy="160" r="2" fill="url(#mainGradient)" opacity="0.4"/>
+  
+  <!-- Main initials Z and M -->
+  <g filter="url(#glow)">
+    <!-- Letter Z -->
+    <path d="M 55,65 L 90,65 L 55,105 L 90,105" 
+          stroke="url(#mainGradient)" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    <line x1="55" y1="105" x2="90" y2="65" 
+          stroke="url(#mainGradient)" 
+          stroke-width="6" 
+          stroke-linecap="round"/>
+    
+    <!-- Letter M -->
+    <path d="M 110,105 L 110,65 L 130,85 L 150,65 L 150,105" 
+          stroke="url(#mainGradient)" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Subtle circuit pattern -->
+  <g opacity="0.2">
+    <line x1="25" y1="130" x2="45" y2="130" stroke="url(#mainGradient)" stroke-width="1"/>
+    <circle cx="45" cy="130" r="2" fill="url(#mainGradient)"/>
+    <line x1="45" y1="130" x2="45" y2="145" stroke="url(#mainGradient)" stroke-width="1"/>
+    
+    <line x1="175" y1="130" x2="155" y2="130" stroke="url(#mainGradient)" stroke-width="1"/>
+    <circle cx="155" cy="130" r="2" fill="url(#mainGradient)"/>
+    <line x1="155" y1="130" x2="155" y2="145" stroke="url(#mainGradient)" stroke-width="1"/>
+  </g>
+</svg>
