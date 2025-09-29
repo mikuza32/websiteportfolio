@@ -20,6 +20,49 @@ const LandingPage = () => {
 
     const [repositories, setRepositories] = useState([]);
 
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slides = [
+        {
+            id: 1,
+            title: "Hello! I'm Zane Mikula",
+            description: "Welcome to my portfolio! I'm a passionate junior developer ready to make a positive impact with my technical skills.",
+            image: "unnamed.jpg",
+            imageAlt: "profile",
+            subtitle: "Junior Developer",
+            cta1Text: "View My Work",
+            cta1Link: "/ContactMe"
+        },
+        {
+            id: 2,
+            title: "Passion for Impact",
+            description: "Driven to create technical solutions that help make life better.",
+            image: "slide-2.jpg",
+            imageAlt: "profile",
+            subtitle: "Problem Solver",
+            cta1Text: "Contact",
+            cta1Link: "/#projects-section"
+        },
+        {
+            id: 3,
+            title: "From Student Athlete to Junior Developer",
+            description: "Bringing life lessons on the field to building software solutions",
+            image: "slide-3.jpg",
+            imageAlt: "baseball",
+            subtitle: "Discipline Meets Development",
+            cta1Text: "Learn More",
+            cta1Link: "/#aboutMe-section"
+        }
+    ]
+
+    useEffect(() => {
+        const slideInterval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000);
+
+        return () => clearInterval(slideInterval);
+    }, [])
+
 
 
     useEffect(() => {
@@ -93,23 +136,33 @@ const LandingPage = () => {
             {isLoading && <LoadingScreen />}
             <div className="landing-page">
                 <section className="greeting-section" id="greeting-section">
-                    <div className="greeting-desc" data-aos="fade-down" data-aos-delay="200">
-                        <h1>Hello! I'm Zane Mikula.</h1>
-                        <p>Welcome to my portfolio! I'm a passionate junior developer ready to make a positive impact with my technical skills</p>
+                    <div className="greeting-desc slide-content" key={currentSlide}>
+                        <h1>{slides[currentSlide].title}</h1>
+                        <p>{slides[currentSlide].description}</p>
                         <div className="button-container">
-                            <a href="/Zane_Mikula_Junior_Web_Developer.pdf" download>
-                                <button className="download-button">Resume</button>
-                            </a>
-                            <HashLink smooth to="/#projects-section">
-                                <button className="view-work-button">View My Work</button>
+                                <a href="/Zane_Mikula_Junior_Web_Developer.pdf" download>
+                                    <button className="download-button">Resume</button>
+                                </a>
+                            <HashLink smooth to={slides[currentSlide].cta1Link}>
+                                <button className="view-work-button">{slides[currentSlide].cta1Text}</button>
                             </HashLink>
                         </div>
                     </div>
-                    <div className="personal-card" data-aos="fade-down">
+                    <div className="personal-card slide-content" key={`img-${currentSlide}`}>
                         <div className="personal-img">
-                            <img src="unnamed.jpg" alt="Profile"/>
-                            <h2>Junior Developer</h2>
+                            <img src={slides[currentSlide].image} alt={slides[currentSlide].imageAlt}/>
+                            <h2>{slides[currentSlide].subtitle}</h2>
                         </div>
+                    </div>
+                    <div className="slide-indicators">
+                        {slides.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`indicator ${index == currentSlide ? 'active' : ''}`}
+                                onClick={() => setCurrentSlide(index)}
+                                aria-label={`Go to slide ${index + 1}`}
+                            />
+                        ))}
                     </div>
                 </section>
                 <section className="information-section">
@@ -296,13 +349,12 @@ const LandingPage = () => {
                             </a>
                         </div>
                         <div className="footer-nav">
-                            <HashLink smooth to="#greeting-section" className='greeting-button-footer'>Home</HashLink>
-                            <HashLink smooth to="#aboutMe-section" className='about-button-footer'>About Me</HashLink>
-                            <HashLink smooth to="#projects-section"
-                                      className='projects-button-footer'>Projects</HashLink>
-                            <HashLink smooth to="#testimonials-section"
-                                      className='testimonial-button-footer'>Testimonials</HashLink>
-                            <Link to="/ContactMe" className="contact-me-page-footer">Contact Me</Link>
+                            <HashLink smooth to="#greeting-section" className='greeting-button-footer'>HOME</HashLink>
+                            <HashLink smooth to="#aboutMe-section" className='about-button-footer'>ABOUT</HashLink>
+                            <HashLink smooth to="#projects-section"className='projects-button-footer'>PPROJECTS</HashLink>
+                            <HashLink smooth to="#testimonials-section"className='testimonial-button-footer'>TESTIMONIALS</HashLink>
+                            <HashLink smooth to="#myExperience-section" className='myExperience-button-footer'>EXPERIENCE</HashLink>
+                            <Link to="/ContactMe" className="contact-me-page-footer">CONTACT</Link>
                         </div>
                         <div className="footer-copy">
                             <p>2025 Zane Mikula</p>
